@@ -3,27 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Password generator app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
+  <main>
+    <header>
+      <h1 class="main-title">Password Generator</h1>
+    </header>
 
-  Password Generator
+    <section class="password">
+      <div class="content-container password__container">
+        <p class="password__para"></p>
+        <svg class="password__icon-copy" width="21" height="24">
+          <use href="./assets/images/script.svg#icon-copy"></use>
+        </svg>
+      </div>
+    </section>
 
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
+    <section class="pswd-settings">
+      <form action="">
+        <div class="form__container content-container">
+          <div class="form__pswd-length-container">
+            <label for="length" class="form__pswd-length-label">Character Length</label>
+            <p class="form__psed-length-output">10</p>
+          </div>
+          <input 
+            type="range" 
+            class="form__pswd-length-input"
+            name="pswd-length"
+            id="length"
+            min="0"
+            max="20"
+            step="1"
+            value="10"
+            >
+          <div class="form__options">
+            
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
