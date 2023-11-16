@@ -12,26 +12,28 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-  <main>
-    <header>
-      <h1 class="main-title">Password Generator</h1>
+  <main class="main">
+    <header class="header">
+      <div class="content-container"></div>
+        <h1 class="header__title">Password Generator</h1>
+      </div>
     </header>
 
-    <section class="password">
+    <section class="password section-any">
       <div class="content-container password__container">
-        <p class="password__para"></p>
+        <p class="password__para">P4$5W0rD!</p>
         <svg class="password__icon-copy" width="21" height="24">
           <use href="./assets/images/script.svg#icon-copy"></use>
         </svg>
       </div>
     </section>
 
-    <section class="pswd-settings">
-      <form action="">
+    <section class="pswd-settings section-any">
+      <form class="pswd-settings__form">
         <div class="form__container content-container">
           <div class="form__pswd-length-container">
             <label for="length" class="form__pswd-length-label">Character Length</label>
-            <p class="form__psed-length-output">10</p>
+            <p class="form__pswd-length-output">0</p>
           </div>
           <input 
             type="range" 
@@ -41,11 +43,85 @@
             min="0"
             max="20"
             step="1"
-            value="10"
+            value="0"
             >
-          <div class="form__options">
-            
+          <ul class="form__options-list list-any">
+            <li class="options__item">
+              <input 
+                type="checkbox"
+                class="options__input"
+                name="options"
+                id="uppercase"
+                >
+              <label for="uppercase" class="options__label">Include Uppercase Letters
+                <span class="options__span">
+                  <svg class="options__check-icon" width="15" height="15">
+                    <use href="./assets/images/script.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="options__item">
+              <input 
+                type="checkbox"
+                class="options__input"
+                name="options"
+                id="lowercase"
+                >
+              <label class="options__label" for="lowercase">Include Lowercase Letters
+                <span class="options__span">
+                  <svg class="options__check-icon" width="15" height="15">
+                    <use href="./assets/images/script.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="options__item">
+              <input 
+                type="checkbox"
+                class="options__input"
+                name="options"
+                id="numbers"
+                >
+              <label class="options__label" for="numbers">Include Numbers
+                <span class="options__span">
+                  <svg class="options__check-icon" width="15" height="15">
+                    <use href="./assets/images/script.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="options__item">
+              <input 
+                type="checkbox"
+                class="options__input"
+                name="options"
+                id="symbols"
+                >
+              <label class="options__label" for="symbols">Include Symbols
+                <span class="options__span">
+                  <svg class="options__check-icon" width="15" height="15">
+                    <use href="./assets/images/script.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+          </ul>
+          <div class="form__sterngth">
+            <h3 class="strength__title">STRENGTH</h3>
+            <div class="strength__strength-scale">
+              <p class="strength-scale__para">MEDIUM</p>
+              <div class="strength-scale__scale"></div>
+              <div class="strength-scale__scale"></div>
+              <div class="strength-scale__scale"></div>
+              <div class="strength-scale__scale"></div>
+            </div>
           </div>
+          <button class="form__submit-btn button-any" type="submit">GENERATE
+            <svg class="submit-btn__icon" width="11" height="14">
+              <use href="./assets/images/script.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
         </div>
       </form>
     </section>
