@@ -34,6 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background-color 500ms;
 }
 h1,
 h2,
@@ -69,11 +70,10 @@ h1 {
     align-items: center;
     cursor: pointer;
     transition: 
-        background-color 100ms,
-        border-color 100ms;
+        background-color 150ms,
+        border-color 150ms;
 }
-.button-any:hover,
-.button-any:focus {
+.button-any:hover {
     background-color: transparent;
     border: 2px solid var(--Neon-Green, #A4FFAF);
     color: var(--Neon-Green, #A4FFAF);
@@ -90,6 +90,17 @@ h1 {
 .password__icon-copy:focus {
     fill: #FFF;
 }
+.password__copy-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.copy__para {
+    display: none;
+    color: transparent;
+    line-height: normal;
+    transition: color 150ms;
+}
 /* Password Settings */
 .form__pswd-length-container {
     display: flex;
@@ -101,19 +112,29 @@ h1 {
     line-height: normal;
 }
 
+
+
 .form__pswd-length-input {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
     appearance: none;
-    height: 28px;
-    background-color: transparent;
+    height: 8px;
+    background-color: var(--Very-Dark-Grey, #18171F);
 }
 .form__pswd-length-input::-webkit-slider-runnable-track {
-    height: 8px;
-    background-color: var(--Very-Dark-Grey, #18171F);  
-    color: red;
+    -webkit-appearance: none;
+    background-color: transparent;  
+}
+.form__pswd-length-input::-moz-range-track {
+    -moz-appearance: none;
+    background-color: transparent;
+}
+.form__pswd-length-input::-ms-track {
+    -ms-appearance: none;
+    background-color: transparent;
 }
 .form__pswd-length-input::-webkit-slider-thumb {
     background-color: var(--Almost-White, #E6E5EA);
@@ -122,15 +143,47 @@ h1 {
     cursor: pointer;
     width: 28px;
     height: 28px;
-    margin-top: -10px;
     -webkit-appearance: none;
     transition: 
-        background-color 100ms;
+        background-color 150ms;
+}
+.form__pswd-length-input::-moz-range-thumb {
+    background-color: var(--Almost-White, #E6E5EA);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    -moz-appearance: none;
+    transition:
+        background-color 150ms;
+}
+.form__pswd-length-input::-ms-thumb {
+    background-color: var(--Almost-White, #E6E5EA);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    -ms-appearance: none;
+    transition:
+        background-color 150ms;
 }
 .form__pswd-length-input::-webkit-slider-thumb:hover {
     background-color: var(--Very-Dark-Grey, #18171F);
     border: 2px solid var(--Neon-Green, #A4FFAF);
 }
+.form__pswd-length-input::-moz-range-thumb:hover {
+    background-color: var(--Very-Dark-Grey, #18171F);
+    border: 2px solid var(--Neon-Green, #A4FFAF);
+}
+.form__pswd-length-input::-ms-thumb:hover {
+    background-color: var(--Very-Dark-Grey, #18171F);
+    border: 2px solid var(--Neon-Green, #A4FFAF);
+}
+
+
+
 .options__item {
     position: relative;
     display: flex;
@@ -154,8 +207,8 @@ h1 {
     justify-content: center;
     align-items: center;
     transition:
-        background-color 100ms,
-        border-color 100ms;
+        background-color 150ms,
+        border-color 150ms;
 }
 .options__check-icon {
     stroke: transparent;
