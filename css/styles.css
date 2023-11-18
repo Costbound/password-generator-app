@@ -28,6 +28,7 @@ body {
     color: var(--Almost-White, #E6E5EA);
     background-color: #07050e;
     background-image: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+    line-height: normal;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -52,12 +53,10 @@ p {
 }
 .content-container {
     margin: 0 auto;
-    width: 100%;
 }
 h1 {
     color: #817D92;
     text-align: center;
-    line-height: normal;
 }
 .button-any {
     display: block;
@@ -81,6 +80,16 @@ h1 {
 }
 
 /* Password */
+.password {
+    display: flex;
+    align-items: center;
+}
+.password__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 .password__icon-copy {
     cursor: pointer;
     fill: var(--Neon-Green, #A4FFAF);
@@ -98,7 +107,6 @@ h1 {
 .copy__para {
     display: none;
     color: transparent;
-    line-height: normal;
     transition: color 150ms;
 }
 /* Password Settings */
@@ -109,7 +117,6 @@ h1 {
 }
 .form__pswd-length-output {
     color: var(--Neon-Green, #A4FFAF);
-    line-height: normal;
 }
 
 
@@ -188,6 +195,8 @@ h1 {
     position: relative;
     display: flex;
     align-items: center;
+    height: 24px;
+    padding-left: 24px;
 }
 .options__item:last-child {
     margin-bottom: 32px;
@@ -221,14 +230,14 @@ h1 {
 .options__input:checked + .options__label .options__check-icon {
     stroke: black;
 }
-.form__sterngth {
+.form__strength {
     background-color: #18171F;
-    padding-left: 32px;
-    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .strength__title {
     color: var(--Grey, #817D92);
-    line-height: normal;
 }
 .strength__strength-scale {
     display: flex;
@@ -241,42 +250,89 @@ h1 {
     border: 2px solid var(--Almost-White, #E6E5EA);
 }
 
-
+@media (max-width: 767px) {
+    .section-any {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 343px;
+    }
+    .button-any {
+        height: 56px;
+        gap: 16px;
+    }
+    /* Header */
+    .header__title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    /* Password */
+    .password {
+        height: 64px;
+        margin-bottom: 16px;
+    }
+    .copy__para {
+        font-size: 16px;
+    }
+    .password__para {
+        font-size: 24px;
+    }
+    /* Password Setting */
+    .pswd-settings {
+        padding-top: 21px;
+        padding-bottom: 16px;
+    }
+    .form__pswd-length-container {
+        margin-bottom: 8px;
+    }
+    .form__pswd-length-label {
+        font-size: 16px;
+    }
+    .form__pswd-length-output {
+        font-size: 24px;
+    }
+    .options__item {
+        font-size: 16px;
+    }
+    .options__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    .form__strength {
+        height: 56px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 16px;
+    }
+    .strength__title {
+        font-size: 16px;
+    }
+}
 @media (min-width: 768px) {
-    /* .main {
+    .main {
         position: relative;
-        bottom: 100px;
-    } */
+        bottom: 80px;
+    }
     .section-any {
         padding-left: 32px;
         padding-right: 32px;
         width: 540px;
+    }
+    .button-any {
+        height: 65px;
+        gap: 24px;
     }
     /* Header */
     .header__title {
         font-size: 24px;
         margin-bottom: 31px;
     }
-    .button-any {
-        height: 65px;
-        gap: 24px;
-    }
 
     /* Password */
     .password {
         height: 80px;
         margin-bottom: 24px;
-        display: flex;
-        align-items: center;
-    }
-    .password__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     .password__para {
         font-size: 32px;
-        line-height: normal;
     }
 
     /* Password Settings */
@@ -290,19 +346,14 @@ h1 {
     .form__pswd-length-output {
         font-size: 32px;
     }
-    .options__item {
-        height: 24px;
-        padding-left: 24px;
-    }
     .options__item:not(:last-child) {
         margin-bottom: 19px;
     }
-    .form__sterngth {
+    .form__strength {
         height: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
     .strength__title {
         font-size: 18px;

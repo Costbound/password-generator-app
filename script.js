@@ -21,7 +21,6 @@ const lengthMessage = document.querySelector(".form__pswd-length-output::before"
 const delay = async (ms) => { await new Promise(resolve => setTimeout(resolve, ms)) };
 
 pswdOutput.style.opacity = "0.25";
-const lengthChange = () => { lengthOutput.textContent = lengthInput.value };
 
 copyBtn.onclick = async function () {
     if (pswdOutput.textContent !== "P4$5W0rD!") {
@@ -53,7 +52,6 @@ form.addEventListener("submit", (evt) => {
     evt.preventDefault();
     generatePswd();
 })
-
 
 async function generatePswd() {
     const lettersLowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -118,8 +116,8 @@ function generatePswdStrength(pswd) {
     }
 }
 
-function strengthStyling(scale, color, text, num) {
-    if (num) {
+function strengthStyling(scale, color, text, bul) {
+    if (bul) {
         scale.style.border = "none";
         scale.style.backgroundColor = color;
         strengthPara.textContent = text.toUpperCase();
