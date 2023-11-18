@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []
+- Solution URL: [https://www.frontendmentor.io/solutions/adaptivepasswordgeneratorappnativejs-NLwAiDvCD0]
 - Live Site URL: [https://costbound.github.io/password-generator-app/]
 
 ## My process
